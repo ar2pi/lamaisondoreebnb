@@ -1,5 +1,3 @@
-version: '3'
-
 services:
   payload:
     image: node:18-slim
@@ -7,9 +5,10 @@ services:
       - '3000:3000'
     volumes:
       - .:/home/node/app
-      - node_modules:/home/node/app/node_modules
+      - pnpm-store:/home/node/app/.pnpm-store
+      # - node_modules:/home/node/app/node_modules
     working_dir: /home/node/app/
-    command: sh -c "npm install -g pnpm && pnpm install && pnpm dev"
+    command: sh -c "npm install -g npm pnpm && pnpm install && pnpm dev"
     depends_on:
       - postgres
     env_file:
@@ -41,4 +40,5 @@ services:
 volumes:
   # data:
   pgdata:
-  node_modules:
+  # node_modules:
+  pnpm-store:
