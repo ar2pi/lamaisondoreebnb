@@ -12,10 +12,8 @@ export const Rooms: CollectionConfig = {
       required: true,
     },
     {
-      name: 'is_available',
-      label: 'Is available',
-      type: 'checkbox',
-      defaultValue: true,
+      name: 'description',
+      type: 'textarea',
     },
     {
       name: 'capacity',
@@ -34,6 +32,12 @@ export const Rooms: CollectionConfig = {
       type: 'relationship',
       relationTo: 'media',
       hasMany: true,
+    },
+    {
+      name: 'is_available',
+      label: 'Is available',
+      type: 'checkbox',
+      defaultValue: true,
     },
   ],
 }

@@ -177,10 +177,11 @@ export interface Reservation {
 export interface Room {
   id: number;
   name: string;
-  is_available?: boolean | null;
+  description?: string | null;
   capacity?: number | null;
   price: number;
   media?: (number | Media)[] | null;
+  is_available?: boolean | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -306,10 +307,11 @@ export interface ReservationsSelect<T extends boolean = true> {
  */
 export interface RoomsSelect<T extends boolean = true> {
   name?: T;
-  is_available?: T;
+  description?: T;
   capacity?: T;
   price?: T;
   media?: T;
+  is_available?: T;
   updatedAt?: T;
   createdAt?: T;
 }
