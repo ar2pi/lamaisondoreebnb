@@ -25,4 +25,4 @@ docker compose up
 - [ ] [productionize build](https://payloadcms.com/docs/production/deployment) aws ecs fargate, rds postgres aurora serverless v2, s3, route53, acm, ses, etc.
 - [ ] admin dashboard, reservation stats, calendar, etc.
 - [ ] user profile
-- [ ] [astro](https://docs.astro.build/en/guides/cms/payload/) maybe?
+- [ ] [astro](https://docs.astro.build/en/guides/cms/payload/) (optional)
